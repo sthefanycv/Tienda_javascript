@@ -41,9 +41,11 @@ if ((localStorage.getItem('rol') === 'Admin') && (isLoggedIn = localStorage.getI
 }
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const loginButton = document.getElementById('login');
 
-    // Función para verificar si hay sesión iniciada
-    function checkSession() {
+  // Función para verificar si hay sesión iniciada
+  function checkSession() {
       const isLoggedIn = localStorage.getItem('isLoggedIn');
 
       if (isLoggedIn === 'true') {
@@ -57,3 +59,4 @@ if ((localStorage.getItem('rol') === 'Admin') && (isLoggedIn = localStorage.getI
 
   // Llamar a la función al cargar la página para establecer el enlace inicial
   checkSession();
+});
