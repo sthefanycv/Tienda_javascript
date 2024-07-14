@@ -2,194 +2,190 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tieda Javascript</title>
-  <link href="./output.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Javascript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    <link href="/src/styles.css" rel="stylesheet">
+    <link href="/src/output.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-        <!-- Call to Action Section -->
-        <div id="cta-section" class="bg-[#272727] text-zinc-50 p-8 lg:p-4 font">
-            <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center">
-                
-    <!-- Follow Us Section -->
-    <div class="hidden lg:flex items-center space-x-2 mb-2 lg:mb-0">
-        <span>Follow us:</span>
-        <a href="https://facebook.com" target="_blank">
-            <img src="/assets/img/social_media_icons (4).png" alt="Facebook" class="w-6 h-6">
-        </a>
-        <a href="https://twitter.com" target="_blank">
-            <img src="/assets/img/social_media_icons (1).png" alt="Twitter" class="w-6 h-6">
-        </a>
-        <a href="https://instagram.com" target="_blank">
-            <img src="/assets/img/social_media_icons (3).png" alt="Instagram" class="w-6 h-6">
-        </a>
-    </div>
-    
-                <!-- Discount Text Section -->
-                <div class="text-center font-bold mb-2 text-lg  lg:mb-0">
-                    <span>Inicia sesión para obtener un 20% de descuento en todas nuestras colecciones</span>
-                </div>
-    
-                <!-- Contact Section -->
-                <div class="flex items-center space-x-2">
-                    <img src="/assets/img/social_media_icons (2).png" alt="Phone" class="w-6 h-6">
-                    <span>+123-456-7890</span>
-                </div>
+<body class="bg-slate-50">
+    <!-- Call to Action Section -->
+    <div id="cta-section" class="bg-[#272727] text-zinc-50 p-8 lg:p-4 font">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center">
+            <!-- Follow Us Section -->
+            <div class="hidden lg:flex items-center space-x-2 mb-2 lg:mb-0">
+                <span>Follow us:</span>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="/assets/img/social_media_icons (4).png" alt="Facebook" class="w-6 h-6">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="/assets/img/social_media_icons (1).png" alt="Twitter" class="w-6 h-6">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="/assets/img/social_media_icons (3).png" alt="Instagram" class="w-6 h-6">
+                </a>
+            </div>
+            <!-- Discount Text Section -->
+            <div class="text-center font-bold mb-2 text-lg  lg:mb-0">
+                <span>Inicia sesión para obtener un 20% de descuento en todas nuestras colecciones</span>
+            </div>
+            <!-- Contact Section -->
+            <div class="flex items-center space-x-2">
+                <img src="/assets/img/social_media_icons (2).png" alt="Phone" class="w-6 h-6">
+                <span>+123-456-7890</span>
             </div>
         </div>
+    </div>
 
-<!-- Barra de Navegación -->
-<nav class="bg-white shadow-lg p-4">
-    <div class="max-w-7xl mx-auto lg:px-8">
-      <div class="flex items-center justify-between">
-        <!-- Logo visible solo en desktop -->
-        <div class="hidden lg:flex items-center">
-          <a href="#" class="flex-shrink-0">
-            <img class="h-10 transform hover:scale-110 transition duration-300" src="/assets/img/brand_logo.png" alt="Logo">
-          </a>
-        </div>
-        <!-- Enlaces de Categorías -->
-        <div class="flex items-center justify-center lg:justify-between text-2xl">
-          <div class="hidden lg:flex space-x-4">
-            <a href="index.html" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md font-medium text-lg">Home</a>
-            <a href="productos.html" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md font-medium text-lg">Productos</a>
-            <a href="contacto.html" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md font-medium text-lg">Contacto</a>
-          </div>
-        </div>
-        <!-- Botones de Acción -->
-        <div class="hidden lg:flex items-center space-x-4 lg:ml-8">
-          <a href="registro.html">
-            <img src="/assets/img/icons_menu-03.png" alt="Registro" class="h-8">
-          </a>
-          <a href="login.html">
-            <img src="/assets/img/icons_menu-05.png" alt="Login" class="h-8">
-          </a>
-          <a href="carrito.html">
-            <img src="/assets/img/icons_menu-04.png" alt="Carrito" class="h-8">
-          </a>
-          <a href="favoritos.html">
-            <img src="/assets/img/icons_menu-02.png" alt="Favoritos" class="h-8">
-          </a>
-        </div>
-      </div>
+    <!-- Barra de Navegación -->
+    <nav class="bg-white shadow-lg p-4">
+        <div class="max-w-7xl mx-auto lg:px-8">
+            <div class="flex justify-center items-center lg:justify-between">
+                <!-- Logo visible solo en desktop -->
+                <div class="hidden lg:flex items-center">
+                    <a href="/src/index.html" class="flex-shrink-0">
+                        <img class="h-10 transform hover:scale-110 transition duration-300"
+                            src="/assets/img/brand_logo.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- Enlaces de Categorías -->
+                <div class="flex items-center justify-center lg:justify-between text-2xl">
+                    <div class="hidden lg:flex space-x-4">
+                        <a href="/src/index.html"
+                            class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md font-medium text-lg">Home</a>
+                        <a href="/src/views/productos.html"
+                            class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md font-medium text-lg">Productos</a>
+                        <a href="/src/views/contacto.html"
+                            class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md font-medium text-lg">Contacto</a>
+                    </div>
+                </div>
+                <!-- Botones de Acción -->
+                <div class=" flex items-center lg:flex justify-center gap-4 max-w-3xl lg:ml-8 mt-3">
+                    <a href="/src/views/register.html" class=" items-center">
+                        <img src="/assets/img/icons_menu-03.png" alt="Registro" class="h-8">
+                    </a>
+                    <a id="login">
+                        <img src="/assets/img/icons_menu-05.png" alt="Login" class="h-8">
+                    </a>
+                    <a href="/src/views/carrito.html">
+                        <img src="/assets/img/icons_menu-04.png" alt="Carrito" class="h-8">
+                    </a>
+                    <a href="/src/views/favoritos.html">
+                        <img src="/assets/img/icons_menu-02.png" alt="Favoritos" class="h-8">
+                    </a>
+                </div>
+            </div>
+            <!-- Enlaces de Categorías y Botones de Acción en Mobile -->
+            <div class="lg:hidden mt-4 flex flex-col items-center justify-center">
+                <!-- Enlaces de Categorías -->
+                <div class="flex space-x-4 mb-4">
+                    <a href="/src/index.html"
+                        class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/src/views/productos.html"
+                        class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Productos</a>
+                    <a href="/src/views/contacto.html"
+                        class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                </div>
+
+</nav>   
   
-      <!-- Enlaces de Categorías y Botones de Acción en Mobile -->
-      <div class="lg:hidden mt-4 flex flex-col items-center justify-center">
-        <!-- Enlaces de Categorías -->
-        <div class="flex space-x-4 mb-4">
-          <a href="index.html" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-          <a href="productos.html" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Productos</a>
-          <a href="contacto.html" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
-        </div>
-        <!-- Botones de Acción -->
-        <div class="flex space-x-4">
-          <a href="registro.html">
-            <img src="/assets/img/icons_menu-03.png" alt="Registro" class="h-8">
-          </a>
-          <a href="login.html">
-            <img src="/assets/img/icons_menu-05.png" alt="Login" class="h-8">
-          </a>
-          <a href="carrito.html">
-            <img src="/assets/img/icons_menu-04.png" alt="Carrito" class="h-8">
-          </a>
-          <a href="favoritos.html">
-            <img src="/assets/img/icons_menu-02.png" alt="Favoritos" class="h-8">
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
 
 
-<!-- Banner Principal -->
-<section class="bg-cover bg-center bg-no-repeat py-10 lg:py-16" style="background-image: url('/assets/img/background_banner_01.png'); height: 600px;">
+  <!-- Banner Principal -->
+  <section class="bg-cover bg-center bg-no-repeat py-10 lg:py-16"
+    style="background-image: url('/assets/img/background_banner_01.png'); height: 600px;">
     <div class="max-w-7xl mx-auto px-4 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-8 gap-6 items-center">
-            <!-- Columna Izquierda (Texto) -->
-            <div class="lg:col-span-5 text-center lg:text-left">
-                <h3 class="text-lg lg:text-xl font-medium mb-2 text-white">Subtítulo</h3>
-                <h2 class="text-3xl lg:text-5xl font-bold mb-4 text-white">Título del Banner</h2>
-                <p class="text-lg lg:text-xl mb-6 text-white">Descripción del banner que explica lo que ofrece. Puedes modificar este texto según sea necesario para tu contenido.</p>
-                <button class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold transition-transform hover:scale-105">Ver Productos</button>
-            </div>
-
-            <!-- Columna Derecha (Imagen) -->
-            <div class="lg:col-span-3 flex justify-center">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-  <!-- Nueva Sección -->
-  <section class="mt-10">
-    <div class="container mx-auto px-4 lg:px-8">
-      <!-- Título de la Sección -->
-      <h2 class="text-3xl font-bold text-center mb-8">Nuestra Sección</h2>
-      
-      <!-- Contenedor de los Divs -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Div 1 -->
-        <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center" data-aos="zoom-in-up">
-          <img src="https://via.placeholder.com/150" alt="Imagen 1" class="mb-4">
-          <p class="text-lg font-medium mb-4">Texto 1</p>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Botón 1</button>
-        </div>
-        
-        <!-- Div 2 -->
-        <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
-          <img src="https://via.placeholder.com/150" alt="Imagen 2" class="mb-4">
-          <p class="text-lg font-medium mb-4">Texto 2</p>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Botón 2</button>
+      <div class="grid grid-cols-1 lg:grid-cols-8 gap-6 items-center">
+        <!-- Columna Izquierda (Texto) -->
+        <div class="lg:col-span-5 text-center lg:text-left">
+          <h3 class="text-lg lg:text-xl font-medium mb-2 text-white">Subtítulo</h3>
+          <h2 class="text-3xl lg:text-5xl font-bold mb-4 text-white">Título del Banner</h2>
+          <p class="text-lg lg:text-xl mb-6 text-white">Descripción del banner que explica lo que ofrece. Puedes
+            modificar este texto según sea necesario para tu contenido.</p>
+          <button
+            class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold transition-transform hover:scale-105">Ver
+            Productos</button>
         </div>
 
-        <!-- Div 3 -->
-        <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
-          <img src="https://via.placeholder.com/150" alt="Imagen 3" class="mb-4">
-          <p class="text-lg font-medium mb-4">Texto 3</p>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Botón 3</button>
-        </div>
-        
-        <!-- Div 4 -->
-        <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
-          <img src="https://via.placeholder.com/150" alt="Imagen 4" class="mb-4">
-          <p class="text-lg font-medium mb-4">Texto 4</p>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Botón 4</button>
+        <!-- Columna Derecha (Imagen) -->
+        <div class="lg:col-span-3 flex justify-center">
         </div>
       </div>
     </div>
   </section>
 
 
-    <!-- Categorias-->
-    <section class="mt-10">
-        <div class="container mx-auto px-4 lg:px-8">
-          <!-- Contenedor de las Columnas -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <!-- Columna Izquierda -->
-            <div class="bg-blue-500 p-8 rounded-lg flex flex-col justify-center text-center lg:text-left">
-              <h2 class="text-3xl font-bold text-white mb-4">Título de la Sección</h2>
-              <p class="text-lg text-white mb-6">Descripción de la sección que explica lo que ofrece. Puedes modificar este texto según sea necesario para tu contenido.</p>
-              <button class="bg-white text-blue-500 px-4 py-2 rounded-md font-semibold transition-transform hover:scale-105">Más Información</button>
-            </div>
-    
-            <!-- Columna Derecha -->
-            <div class=" hidden lg:flex lg:items-center lg:justify-center">
-              <img src="https://via.placeholder.com/400" alt="Imagen de Sección" class="transform transition-transform hover:scale-105 rounded-lg">
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- CATEGORIAS -->
+  <section class="mt-10">
+    <div class="container mx-auto px-4 lg:px-8">
+      <!-- Título de la Sección -->
+      <h2 class="text-3xl font-bold text-center mb-8">Nuestra Sección</h2>
 
-      
+      <!-- Contenedor de los Divs -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Div 1 -->
+        <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center" data-aos="zoom-in-up">
+          <img src="https://via.placeholder.com/150" alt="Imagen 1" class="mb-4">
+          <p class="text-lg font-medium mb-4">Texto 1</p>
+          <button class="bg-[#272727] text-white px-4 py-2 rounded-lg hover:bg-blue-600">Botón 1</button>
+        </div>
+
+        <!-- Div 2 -->
+        <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
+          <img src="https://via.placeholder.com/150" alt="Imagen 2" class="mb-4">
+          <p class="text-lg font-medium mb-4">Texto 2</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Botón 2</button>
+        </div>
+
+        <!-- Div 3 -->
+        <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
+          <img src="https://via.placeholder.com/150" alt="Imagen 3" class="mb-4">
+          <p class="text-lg font-medium mb-4">Texto 3</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Botón 3</button>
+        </div>
+
+        <!-- Div 4 -->
+        <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
+          <img src="https://via.placeholder.com/150" alt="Imagen 4" class="mb-4">
+          <p class="text-lg font-medium mb-4">Texto 4</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Botón 4</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BANNER 2-->
+  <section class="mt-10">
+    <div class="container mx-auto px-4 lg:px-8">
+      <!-- Contenedor de las Columnas -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Columna Izquierda -->
+        <div class="bg-blue-500 p-8 rounded-lg flex flex-col justify-center text-center lg:text-left">
+          <h2 class="text-3xl font-bold text-white mb-4">Título de la Sección</h2>
+          <p class="text-lg text-white mb-6">Descripción de la sección que explica lo que ofrece. Puedes modificar este
+            texto según sea necesario para tu contenido.</p>
+          <button
+            class="bg-white text-blue-500 px-4 py-2 rounded-md font-semibold transition-transform hover:scale-105">Más
+            Información</button>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class=" hidden lg:flex lg:items-center lg:justify-center">
+          <img src="https://via.placeholder.com/400" alt="Imagen de Sección"
+            class="transform transition-transform hover:scale-105 rounded-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- Carrusel de Slide Cards -->
   <div id="carousel" class=" mt-10 flex items-center m-9">
     <!-- Slide 1 -->
@@ -292,41 +288,50 @@
   <!-- Botones de navegación para desktop -->
   <div class="flex justify-center mt-4 mb-10">
     <button id="prevBtn" class="mr-4 bg-gray-800 text-white w-10 h-10 rounded-full shadow-md">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-180" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M10 12a.75.75 0 0 0 .53-.22l3.25-3a.75.75 0 0 0 0-1.06l-3.25-3A.75.75 0 0 0 9.5 6v1.95H3.75a.75.75 0 1 0 0 1.5H9.5V12c0 .28.12.53.32.72z" />
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-180" viewBox="0 0 20 20"
+        fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 12a.75.75 0 0 0 .53-.22l3.25-3a.75.75 0 0 0 0-1.06l-3.25-3A.75.75 0 0 0 9.5 6v1.95H3.75a.75.75 0 1 0 0 1.5H9.5V12c0 .28.12.53.32.72z" />
       </svg>
     </button>
     <button id="nextBtn" class="bg-gray-800 text-white w-10 h-10 rounded-full shadow-md">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M10 12a.75.75 0 0 1-.53-.22l-3.25-3a.75.75 0 0 1 0-1.06l3.25-3A.75.75 0 0 1 10.75 6h5.75a.75.75 0 0 1 .75.75v6.5a.75.75 0 0 1-.75.75h-5.75a.75.75 0 0 1-.53-.22z" />
+        <path fill-rule="evenodd"
+          d="M10 12a.75.75 0 0 1-.53-.22l-3.25-3a.75.75 0 0 1 0-1.06l3.25-3A.75.75 0 0 1 10.75 6h5.75a.75.75 0 0 1 .75.75v6.5a.75.75 0 0 1-.75.75h-5.75a.75.75 0 0 1-.53-.22z" />
       </svg>
     </button>
   </div>
 
-</div>
+  </div>
 
 
 
-<footer class="bg-gray-800 text-white p-4 flex flex-col items-center font-odval">
+<!--FOOTER-->
 
-    <div class=" justify-center text-center mb-4">
-      &copy; <?php echo date('Y'); ?> Fresh & Chill. Todos los derechos reservados.
+  <footer class="bg-[#272727] text-white p-4 flex flex-col items-center">
+
+    <div class=" justify-center text-center font-sans">
+      &copy;
+      <?php echo date('Y'); ?> Home Decor. Todos los derechos reservados.
     </div>
 
     <div class="flex flex-row gap-4">
-      <a href="index.html" class="bg-[#EA6ECF] text-white font-bold py-2 px-4 rounded animate__animated animate__flash" >Inicio</a>
-      <a href="https://wa.link/e0nra6" class="bg-[#3E4DFF] text-white font-bold py-2 px-4 rounded animate__animated animate__wobble">Ordenar</a>
-      <a href="https://www.instagram.com/" class="bg-[#EA6ECF] text-white font-bold py-2 px-4 rounded animate__animated animate__flash">Instagram</a>
+      <a href="index.html"
+        class="text-zinc-400 font-sans py-2 px-4 rounded ">Inicio</a>
+      <a href="/src/views/productos.html"
+        class="text-zinc-400 font-sans py-2 px-4 rounded ">Productos</a>
+      <a href="/src/views/register.html"
+        class="text-zinc-400 font-sans py-2 px-4 rounded ">Registro</a>
     </div>
 
   </footer>
-      
+
 </html>
 
 
 
-      
-    
+
+
 </body>
 
 
@@ -338,6 +343,7 @@
 
 <!--Iconos adicionales-->
 <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
 </html>
 
 <script src="Javascript.js"></script>

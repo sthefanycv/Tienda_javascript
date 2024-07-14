@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Javascript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    <link href="/src/styles.css" rel="stylesheet">
+    <link href="/src/output.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50">
+    <!-- Call to Action Section -->
+    <div id="cta-section" class="bg-[#272727] text-zinc-50 p-8 lg:p-4 font">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center">
+            <!-- Follow Us Section -->
+            <div class="hidden lg:flex items-center space-x-2 mb-2 lg:mb-0">
+                <span>Follow us:</span>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="/assets/img/social_media_icons (4).png" alt="Facebook" class="w-6 h-6">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="/assets/img/social_media_icons (1).png" alt="Twitter" class="w-6 h-6">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="/assets/img/social_media_icons (3).png" alt="Instagram" class="w-6 h-6">
+                </a>
+            </div>
+            <!-- Discount Text Section -->
+            <div class="text-center font-bold mb-2 text-lg  lg:mb-0">
+                <span>Inicia sesión para obtener un 20% de descuento en todas nuestras colecciones</span>
+            </div>
+            <!-- Contact Section -->
+            <div class="flex items-center space-x-2">
+                <img src="/assets/img/social_media_icons (2).png" alt="Phone" class="w-6 h-6">
+                <span>+123-456-7890</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-white shadow-lg p-4">
+        <div class="max-w-7xl mx-auto lg:px-8">
+            <div class="flex justify-center items-center lg:justify-between">
+                <!-- Logo visible solo en desktop -->
+                <div class="hidden lg:flex items-center">
+                    <a href="/src/index.html" class="flex-shrink-0">
+                        <img class="h-10 transform hover:scale-110 transition duration-300"
+                            src="/assets/img/brand_logo.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- Enlaces de Categorías -->
+                <div class="flex items-center justify-center lg:justify-between text-2xl">
+                    <div class="hidden lg:flex space-x-4">
+                        <a href="/src/index.html"
+                            class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md font-medium text-lg">Home</a>
+                        <a href="/src/views/productos.html"
+                            class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md font-medium text-lg">Productos</a>
+                        <a href="/src/views/contacto.html"
+                            class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md font-medium text-lg">Contacto</a>
+                    </div>
+                </div>
+                <!-- Botones de Acción -->
+                <div class=" flex items-center lg:flex justify-center gap-4 max-w-3xl lg:ml-8 mt-3">
+                    <a href="/src/views/register.html" class=" items-center">
+                        <img src="/assets/img/icons_menu-03.png" alt="Registro" class="h-8">
+                    </a>
+                    <a id="login">
+                        <img src="/assets/img/icons_menu-05.png" alt="Login" class="h-8">
+                    </a>
+                    <a href="/src/views/carrito.html">
+                        <img src="/assets/img/icons_menu-04.png" alt="Carrito" class="h-8">
+                    </a>
+                    <a href="/src/views/favoritos.html">
+                        <img src="/assets/img/icons_menu-02.png" alt="Favoritos" class="h-8">
+                    </a>
+                </div>
+            </div>
+            <!-- Enlaces de Categorías y Botones de Acción en Mobile -->
+            <div class="lg:hidden mt-4 flex flex-col items-center justify-center">
+                <!-- Enlaces de Categorías -->
+                <div class="flex space-x-4 mb-4">
+                    <a href="/src/index.html"
+                        class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/src/views/productos.html"
+                        class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Productos</a>
+                    <a href="/src/views/contacto.html"
+                        class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                </div>
+
+</nav>   
+
+
+
+<body class="bg-slate-50">
+    <!-- Banner con imagen de fondo y texto -->
+    <div class="banner flex items-center justify-center text-white text-center h-80 relative z-10 bg-[#272727]">
+        <img src="/assets/img/login-icon.png" alt="Logo" class="w-16 h-16 rounded-full bg-white">
+        <h1 class="ml-4 text-3xl font-semibold font-sans">
+            Inicia Sesión para poder <strong><em>comenzar a comprar</em></strong>
+        </h1>
+    </div>
+
+    <!-- Contenido de la página de pago -->
+    <div class="container mx-auto px-4 lg:px-8 mt-[-80px] relative z-20">
+        <div class="max-w-3xl mx-auto flex justify-between bg-white p-8 rounded-lg shadow-lg">
+            <!-- Resumen del carrito -->
+            <div class="w-1/2 pr-4">
+                <div id="cartSummary">
+                    <!-- Aquí se insertará dinámicamente el resumen del carrito -->
+                </div>
+            </div>
+
+            <!-- Formulario de pago -->
+            <div class="w-1/2 pl-4">
+                <form id="paymentForm" class="space-y-4">
+                    <div>
+                        <label for="cardNumber" class="block text-lg font-medium text-gray-700">Número de Tarjeta</label>
+                        <input type="text" id="cardNumber" name="cardNumber"
+                            class="h-10 mt-2 block w-full bg-gray-200 border-gray-400 rounded-md shadow-sm focus:border-green-700 focus:ring focus:ring-gray-400 focus:ring-opacity-50"
+                            placeholder="NNNN-NNNN-NNNN-NNNN" required>
+                        <p class="text-sm text-gray-500">Formato: NNNN-NNNN-NNNN-NNNN</p>
+                    </div>
+                    <div>
+                        <label for="cardName" class="block text-lg font-medium text-gray-700">Nombres en la Tarjeta</label>
+                        <input type="text" id="cardName" name="cardName"
+                            class="h-10 mt-2 block w-full bg-gray-200 border-gray-400 rounded-md shadow-sm focus:border-green-700 focus:ring focus:ring-gray-400 focus:ring-opacity-50"
+                            placeholder="Nombre(s)" pattern="[A-Za-záéíóúÁÉÍÓÚ\s]{2,}" required>
+                        <p class="text-sm text-gray-500">Solo letras y espacios, mínimo 2 caracteres</p>
+                    </div>
+                    <div>
+                        <label for="cardLastName" class="block text-lg font-medium text-gray-700">Apellidos en la
+                            Tarjeta</label>
+                        <input type="text" id="cardLastName" name="cardLastName"
+                            class="h-10 mt-2 block w-full bg-gray-200 border-gray-400 rounded-md shadow-sm focus:border-green-700 focus:ring focus:ring-gray-400 focus:ring-opacity-50"
+                            placeholder="Apellido(s)" pattern="[A-Za-záéíóúÁÉÍÓÚ\s]{2,}" required>
+                        <p class="text-sm text-gray-500">Solo letras y espacios, mínimo 2 caracteres</p>
+                    </div>
+                    <div>
+                        <label for="cardExpiration" class="block text-lg font-medium text-gray-700">Fecha de
+                            Expiración</label>
+                        <input type="month" id="cardExpiration" name="cardExpiration"
+                            class="h-10 block w-full mt-2 border-gray-400 bg-gray-200 rounded-md shadow-sm focus:border-green-700 focus:ring focus:ring-gray-400 focus:ring-opacity-50"
+                            min="2024-07" required>
+                        <p class="text-sm text-gray-500">Formato: YYYY-MM</p>
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit"
+                            class="mt-4 bg-[#272727] text-white font-medium p-2 rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600 text-xl w-[1000px]">Pagar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Comprobante de pago -->
+        <div id="paymentReceipt" class="hidden mt-8">
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">¡Gracias por tu compra!</h2>
+                <div id="receiptItems" class="mb-4">
+                    <!-- Aquí se insertará dinámicamente el resumen de la compra -->
+                </div>
+                <p class="text-lg">Total pagado: $<span id="receiptTotal"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#272727] text-white p-4 flex flex-col items-center mt-8">
+        <div class="justify-center text-center font-sans">
+            &copy; 2024 Home Decor. Todos los derechos reservados.
+        </div>
+        <div class="flex flex-row gap-4">
+            <a href="/src/index.html" class="text-zinc-400 font-sans py-2 px-4 rounded ">Inicio</a>
+            <a href="/src/views/productos.html" class="text-zinc-400 font-sans py-2 px-4 rounded">Productos</a>
+            <a href="/src/views/contacto.html" class="text-zinc-400 font-sans py-2 px-4 rounded">Contacto</a>
+        </div>
+    </footer>
+
+    <script src="/src/javascript/pago.js"></script>
+</body>
+
+</html>
