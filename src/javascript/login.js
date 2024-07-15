@@ -1,16 +1,16 @@
-// Función para validar el formato de correo electrónico
+// validar correo electrónico
 function validateEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(String(email).toLowerCase());
 }
 
-// Función para validar la clave
+// Validar clave
 function validatePassword(password) {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_/.#$])[A-Za-z\d-_/.#$]{8,}$/;
     return passwordRegex.test(password);
 }
 
-// Función para establecer una cookie
+// Establecer cookies
 function setCookie(name, value, days) {
     const date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -18,7 +18,7 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
-// Función para obtener el valor de una cookie
+// valor de una cookie (Obtener el valor)
 function getCookie(name) {
     const nameEQ = name + "=";
     const ca = document.cookie.split(';');
