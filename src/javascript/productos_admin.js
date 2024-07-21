@@ -41,12 +41,12 @@ const handleProductSubmit = (event) => {
         return;
     }
 
-    const namePattern = /^[a-zA-Z\s]{2,}$/;
+    const namePattern = /^[\p{L}\p{N}\p{P}\p{Zs}]{2,}$/u; // Permite letras, números, puntuación y espacios
     const pricePattern = /^\d+(\.\d{1,2})?$/;
-    const descriptionPattern = /^[a-zA-Z0-9\s.,!?-]{10,}$/;  // Permite letras, números y algunos signos de puntuación, mínimo 10 caracteres.
+    const descriptionPattern = /^.{10,}$/u; // Permite cualquier carácter, mínimo 10 caracteres.
 
     if (!namePattern.test(name)) {
-        alert('El nombre debe contener al menos 2 caracteres y solo letras y espacios.');
+        alert('El nombre debe contener al menos 2 caracteres y puede incluir letras, números, puntuación y espacios.');
         return;
     }
 
@@ -56,7 +56,7 @@ const handleProductSubmit = (event) => {
     }
 
     if (!descriptionPattern.test(description)) {
-        alert('La descripción debe contener al menos 10 caracteres y solo letras, números y ciertos signos de puntuación.');
+        alert('La descripción debe contener al menos 10 caracteres.');
         return;
     }
 
@@ -87,6 +87,7 @@ const handleProductSubmit = (event) => {
             document.getElementById('productForm').removeAttribute('data-editing');
         } else {
             saveProduct(product);
+            alert('Producto guardado');
         }
 
         displayProducts();
@@ -110,6 +111,7 @@ const displayProducts = () => {
             <h2 class="text-lg font-bold mt-2 ml-4">${product.name}</h2>
             <p class="text-gray-600 ml-4">$${product.price}</p>
             <p class="text-gray-600 ml-4">${product.status}</p>
+            <p class="text-gray-600 ml-4">${product.description}</p>
             <button onclick="editProduct(${product.id})" class="bg-yellow-500 text-white px-2 py-1 rounded mt-2 ml-4 mb-2">Editar</button>
             <button onclick="deleteProduct(${product.id})" class="bg-red-500 text-white px-2 py-1 rounded mt-2 ml-4 mb-6">Eliminar</button>
         `;
